@@ -59,12 +59,12 @@ import ReactDOM from "react-dom/client";
 
 
 
-// const Title= (
-//     <h1 className="head" tabIndex="1">
+const Title= (
+    <h1 className="head" tabIndex="1">
         
-//         Namaster React using JSX
-//         </h1>
-// );
+        Namaster React using JSX
+        </h1>
+);
 
 
 
@@ -73,7 +73,7 @@ import ReactDOM from "react-dom/client";
 // component composition
     const Component=()=>(
         <div id="container">
-           {/* {Title} */}
+           {Title}
          
             <h1 className="heading">Namaste React funnctional component</h1>
         </div>
