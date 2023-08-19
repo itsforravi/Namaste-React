@@ -10,6 +10,8 @@ import ReactDOM from "react-dom/client";
  *   -Search
  *   -Resturent Container
  *   -ResturentCard
+ *   -Img
+ *   -name of Res, star Rating,Cuisines ,etc
  * Footer
  *  -CopyRight
  *   -Links
@@ -35,16 +37,26 @@ const Header=()=>{
     );
 };
 
+const ResturentCard=()=>{
+    return (
+        <div className="res-card-1">
+            <img className="res-logo" alt="res-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/tphvhqznraaptconll30"/>
+       <h3 > Megna Food</h3>
+     
+          </div>
+    );
+};
+
 const Body=()=>{
  return (
     <div className="body">
-   <div className="Search">Search</div>
+   <div className="search">Search</div>
         <div className="res-container">
-            
+      <ResturentCard/>
         </div>
     </div>
- )
-}
+ );
+};
 
   const AppLayout=()=>{
     return (
