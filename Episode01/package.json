@@ -1,27 +1,18 @@
 {
   "name": "episode01",
   "version": "1.0.0",
-  "description": "This Is namaste React",
+  "description": "This is namaste react",
   "scripts": {
     "start": "parcel index.html ",
-    "build":"parcel build index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "keywords": [
     "react"
   ],
-  "author": "",
+  "author": "Ravi Kumar Gupt",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.9.3",
-    "process": "^0.11.10"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "browerlist": [
-    "last 10 Chrome version",
-    "last 2 Firefox version"
-  ]
+    "parcel": "^2.9.3"
+  }
 }
