@@ -1,24 +1,63 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const Title= (
-    <h1 className="head" tabIndex="1">
-        
-        Namaster React using JSX
-        </h1>
-);
 
-
-
-
-
-// component composition
-    const Component=()=>(
-        <div id="container">
-           {Title}
-         
-            <h1 className="heading">Namaste React funnctional component</h1>
+/**
+ * Header
+ *  -Logo
+ *   -Nav Items
+ * Body
+ *   -Search
+ *   -Resturent Container
+ *   -ResturentCard
+ * Footer
+ *  -CopyRight
+ *   -Links
+ *   -Address
+ *   -Contact
+ */
+  
+const Header=()=>{
+    return (
+        <div className="Header">
+            <div className="logo-container">
+                <img className="logo" src="https://www.designmantic.com/logo-images/1759.png?company=Company+Name&slogan=&verify=1"/>
+            </div>
+            <div className="nav-items">
+              <ul>
+                <li>Home</li>
+                <li>About us</li>
+                <li>Contact us</li>
+                <li>Cart</li>
+              </ul>
+            </div>
         </div>
     );
+};
+
+const Body=()=>{
+ return (
+    <div className="body">
+   <div className="Search">Search</div>
+        <div className="res-container">
+            
+        </div>
+    </div>
+ )
+}
+
+  const AppLayout=()=>{
+    return (
+        <div  className="app">
+   <Header/>
+   <Body/>
+
+
+        </div>
+    )
+  }
+
+
+
     const root=ReactDOM.createRoot(document.getElementById("root"));
-    root.render(<Component/>);
+    root.render(<AppLayout/>);
