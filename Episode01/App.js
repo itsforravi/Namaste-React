@@ -42,6 +42,9 @@ const ResturentCard=()=>{
         <div className="res-card-1">
             <img className="res-logo" alt="res-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/tphvhqznraaptconll30"/>
        <h3 > Megna Food</h3>
+       <h4>Chizz ,Foregin,Asian</h4>
+       <h4>4.3*</h4>
+       <h4>38 Minutes</h4>
      
           </div>
     );
