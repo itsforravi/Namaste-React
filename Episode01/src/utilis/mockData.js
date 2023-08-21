@@ -7,6 +7,7 @@ const resList=[
         "locality": "Jatepur North",
         "areaName": "Golghar",
         "costForTwo": "₹400 for two",
+        "avgRating": 3.2,
         "cuisines": [
           "Bakery"
         ],
@@ -29,14 +30,14 @@ const resList=[
         },
         "parentId": "3862",
         "avgRatingString": "NEW",
-        "sla": {
+        
           "deliveryTime": 75,
           "lastMileTravel": 2.5,
           "serviceability": "SERVICEABLE",
           "slaString": "75 mins",
           "lastMileTravelString": "2.5 km",
-          "iconType": "ICON_TYPE_EMPTY"
-        },
+          "iconType": "ICON_TYPE_EMPTY",
+        
         "availability": {
           "nextCloseTime": "2023-08-20 23:45:00",
           "opened": true
@@ -145,14 +146,14 @@ const resList=[
         "parentId": "4107",
         "avgRatingString": "3.5",
         "totalRatingsString": "20+",
-        "sla": {
+        
           "deliveryTime": 59,
           "lastMileTravel": 5,
           "serviceability": "SERVICEABLE",
           "slaString": "59 mins",
           "lastMileTravelString": "5.0 km",
-          "iconType": "ICON_TYPE_EMPTY"
-        },
+          "iconType": "ICON_TYPE_EMPTY",
+       
         "availability": {
           "nextCloseTime": "2023-08-20 23:00:00",
           "opened": true
@@ -235,6 +236,7 @@ const resList=[
         "locality": "Shivnagar",
         "areaName": "Golghar",
         "costForTwo": "₹200 for two",
+        "avgRating": 3.5,
         "cuisines": [
           "Indian",
           "Snacks"
@@ -257,14 +259,14 @@ const resList=[
         },
         "parentId": "432734",
         "avgRatingString": "NEW",
-        "sla": {
+        
           "deliveryTime": 54,
           "lastMileTravel": 2.8,
           "serviceability": "SERVICEABLE",
           "slaString": "54 mins",
           "lastMileTravelString": "2.8 km",
-          "iconType": "ICON_TYPE_EMPTY"
-        },
+          "iconType": "ICON_TYPE_EMPTY",
+       
         "availability": {
           "nextCloseTime": "2023-08-20 22:00:00",
           "opened": true
@@ -355,7 +357,7 @@ const resList=[
           "North Indian",
           "South Indian"
         ],
-        "avgRating": 3.5,
+        "avgRating": 4.2,
         "feeDetails": {
           "restaurantId": "178868",
           "fees": [
@@ -375,14 +377,14 @@ const resList=[
         "parentId": "188398",
         "avgRatingString": "3.5",
         "totalRatingsString": "500+",
-        "sla": {
+        
           "deliveryTime": 52,
           "lastMileTravel": 3.7,
           "serviceability": "SERVICEABLE",
           "slaString": "52 mins",
           "lastMileTravelString": "3.7 km",
           "iconType": "ICON_TYPE_EMPTY"
-        },
+        ,
         "availability": {
           "nextCloseTime": "2023-08-20 19:00:00",
           "opened": true
@@ -468,6 +470,7 @@ const resList=[
         "locality": "Raj Cinema Road",
         "areaName": "Golghar",
         "costForTwo": "₹200 for two",
+        "avgRating": 4.5,
         "cuisines": [
           "Bakery"
         ],
@@ -489,14 +492,14 @@ const resList=[
         },
         "parentId": "55091",
         "avgRatingString": "NEW",
-        "sla": {
+        
           "deliveryTime": 46,
           "lastMileTravel": 2.8,
           "serviceability": "SERVICEABLE",
           "slaString": "46 mins",
           "lastMileTravelString": "2.8 km",
           "iconType": "ICON_TYPE_EMPTY"
-        },
+        ,
         "availability": {
           "nextCloseTime": "2023-08-20 23:59:00",
           "opened": true
@@ -580,6 +583,7 @@ const resList=[
         "locality": "VindyaVasini Nagar",
         "areaName": "Miyan Baza",
         "costForTwo": "₹550 for two",
+        "avgRating": 4.9,
         "cuisines": [
           "Bakery"
         ],
@@ -602,14 +606,14 @@ const resList=[
         },
         "parentId": "54688",
         "avgRatingString": "--",
-        "sla": {
+      
           "deliveryTime": 52,
           "lastMileTravel": 3,
           "serviceability": "SERVICEABLE",
           "slaString": "52 mins",
           "lastMileTravelString": "3.0 km",
           "iconType": "ICON_TYPE_EMPTY"
-        },
+      ,
         "availability": {
           "nextCloseTime": "2023-08-20 23:59:00",
           "opened": true
@@ -694,6 +698,7 @@ const resList=[
         "locality": "Dharmshala Bazar",
         "areaName": "Golghar",
         "costForTwo": "₹200 for two",
+        "avgRating": 4.6,
         "cuisines": [
           "Bakery"
         ],
@@ -715,14 +720,14 @@ const resList=[
         },
         "parentId": "13081",
         "avgRatingString": "NEW",
-        "sla": {
+       
           "deliveryTime": 44,
           "lastMileTravel": 2.4,
           "serviceability": "SERVICEABLE",
           "slaString": "44 mins",
           "lastMileTravelString": "2.4 km",
           "iconType": "ICON_TYPE_EMPTY"
-        },
+        ,
         "availability": {
           "nextCloseTime": "2023-08-20 23:59:00",
           "opened": true
@@ -829,14 +834,14 @@ const resList=[
         "parentId": "63483",
         "avgRatingString": "2.7",
         "totalRatingsString": "10+",
-        "sla": {
+        
           "deliveryTime": 57,
           "lastMileTravel": 5,
           "serviceability": "SERVICEABLE",
           "slaString": "57 mins",
           "lastMileTravelString": "5.0 km",
           "iconType": "ICON_TYPE_EMPTY"
-        },
+        ,
         "availability": {
           "nextCloseTime": "2023-08-21 01:00:00",
           "opened": true
@@ -926,7 +931,7 @@ const resList=[
           "Desserts",
           "Bakery"
         ],
-        "avgRating": 3.7,
+        "avgRating": 4.7,
         "feeDetails": {
           "restaurantId": "297635",
           "fees": [
@@ -946,7 +951,7 @@ const resList=[
         "parentId": "55025",
         "avgRatingString": "3.7",
         "totalRatingsString": "100+",
-        "sla": {
+       
           "deliveryTime": 23,
           "lastMileTravel": 2.3,
           "serviceability": "SERVICEABLE",
@@ -957,7 +962,7 @@ const resList=[
         "availability": {
           "nextCloseTime": "2023-08-20 23:59:00",
           "opened": true
-        },
+        ,
         "badges": {
           
         },
@@ -1030,120 +1035,7 @@ const resList=[
       },
       "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
     }
-    ,{
-      "info": {
-        "id": "169497",
-        "name": "Burger King",
-        "cloudinaryImageId": "e33e1d3ba7d6b2bb0d45e1001b731fcf",
-        "locality": "Ad Mall",
-        "areaName": "Shahpur",
-        "costForTwo": "₹350 for two",
-        "cuisines": [
-          "Burgers",
-          "American"
-        ],
-        "avgRating": 4.1,
-        "feeDetails": {
-          "restaurantId": "169497",
-          "fees": [
-            {
-              "name": "BASE_DISTANCE",
-              "fee": 2700
-            },
-            {
-              "name": "BASE_TIME"
-            },
-            {
-              "name": "ANCILLARY_SURGE_FEE"
-            }
-          ],
-          "totalFee": 2700
-        },
-        "parentId": "166",
-        "avgRatingString": "4.1",
-        "totalRatingsString": "10K+",
-        "sla": {
-          "deliveryTime": 33,
-          "lastMileTravel": 3,
-          "serviceability": "SERVICEABLE",
-          "slaString": "33 mins",
-          "lastMileTravelString": "3.0 km",
-          "iconType": "ICON_TYPE_EMPTY"
-        },
-        "availability": {
-          "nextCloseTime": "2023-08-21 01:00:00",
-          "opened": true
-        },
-        "badges": {
-          
-        },
-        "isOpen": true,
-        "type": "F",
-        "badgesV2": {
-          "entityBadges": {
-            "imageBased": {
-              
-            },
-            "textBased": {
-              
-            },
-            "textExtendedBadges": {
-              
-            }
-          }
-        },
-        "aggregatedDiscountInfoV3": {
-          "header": "60% OFF",
-          "subHeader": "UPTO ₹120",
-          "discountCalloutInfo": {
-            "message": "Free Delivery",
-            "logoCtx": {
-              "logo": "v1655895371/free_delivery_logo_hqipbo.png"
-            }
-          }
-        },
-        "orderabilityCommunication": {
-          "title": {
-            
-          },
-          "subTitle": {
-            
-          },
-          "message": {
-            
-          },
-          "customIcon": {
-            
-          }
-        },
-        "differentiatedUi": {
-          "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-          "differentiatedUiMediaDetails": {
-            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-            "lottie": {
-              
-            },
-            "video": {
-              
-            }
-          }
-        },
-        "reviewsSummary": {
-          
-        },
-        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-        "restaurantOfferPresentationInfo": {
-          
-        }
-      },
-      "analytics": {
-        
-      },
-      "cta": {
-        "link": "https://www.swiggy.com/restaurants/burger-king-ad-mall-shahpur-gorakhpur-169497",
-        "type": "WEBLINK"
-      }
-    },
+    ,
     {
       "info": {
         "id": "305577",
@@ -1175,14 +1067,14 @@ const resList=[
         "parentId": "721",
         "avgRatingString": "3.8",
         "totalRatingsString": "1K+",
-        "sla": {
+       
           "deliveryTime": 32,
           "lastMileTravel": 3,
           "serviceability": "SERVICEABLE",
           "slaString": "32 mins",
           "lastMileTravelString": "3.0 km",
           "iconType": "ICON_TYPE_EMPTY"
-        },
+        ,
         "availability": {
           "nextCloseTime": "2023-08-21 00:00:00",
           "opened": true
@@ -1257,121 +1149,7 @@ const resList=[
         "type": "WEBLINK"
       }
     },
-    {
-      "info": {
-        "id": "115343",
-        "name": "Quality Jalpan",
-        "cloudinaryImageId": "a5yxtpipcfqrvtvhjyys",
-        "locality": "Belipar Road",
-        "areaName": "Golghar",
-        "costForTwo": "₹250 for two",
-        "cuisines": [
-          "North Indian"
-        ],
-        "avgRating": 4,
-        "veg": true,
-        "feeDetails": {
-          "restaurantId": "115343",
-          "fees": [
-            {
-              "name": "BASE_DISTANCE",
-              "fee": 2700
-            },
-            {
-              "name": "BASE_TIME"
-            },
-            {
-              "name": "ANCILLARY_SURGE_FEE"
-            }
-          ],
-          "totalFee": 2700
-        },
-        "parentId": "163305",
-        "avgRatingString": "4.0",
-        "totalRatingsString": "10K+",
-        "sla": {
-          "deliveryTime": 25,
-          "lastMileTravel": 3,
-          "serviceability": "SERVICEABLE",
-          "slaString": "25 mins",
-          "lastMileTravelString": "3.0 km",
-          "iconType": "ICON_TYPE_EMPTY"
-        },
-        "availability": {
-          "nextCloseTime": "2023-08-20 18:00:00",
-          "opened": true
-        },
-        "badges": {
-          
-        },
-        "isOpen": true,
-        "type": "F",
-        "badgesV2": {
-          "entityBadges": {
-            "imageBased": {
-              
-            },
-            "textBased": {
-              
-            },
-            "textExtendedBadges": {
-              
-            }
-          }
-        },
-        "aggregatedDiscountInfoV3": {
-          "header": "10% OFF",
-          "subHeader": "ABOVE ₹1100",
-          "discountTag": "FLAT DEAL",
-          "discountCalloutInfo": {
-            "message": "Free Delivery",
-            "logoCtx": {
-              "logo": "v1655895371/free_delivery_logo_hqipbo.png"
-            }
-          }
-        },
-        "orderabilityCommunication": {
-          "title": {
-            
-          },
-          "subTitle": {
-            
-          },
-          "message": {
-            
-          },
-          "customIcon": {
-            
-          }
-        },
-        "differentiatedUi": {
-          "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-          "differentiatedUiMediaDetails": {
-            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-            "lottie": {
-              
-            },
-            "video": {
-              
-            }
-          }
-        },
-        "reviewsSummary": {
-          
-        },
-        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-        "restaurantOfferPresentationInfo": {
-          
-        }
-      },
-      "analytics": {
-        
-      },
-      "cta": {
-        "link": "https://www.swiggy.com/restaurants/quality-jalpan-belipar-road-golghar-gorakhpur-115343",
-        "type": "WEBLINK"
-      }
-    },
+    
     {
       "info": {
         "id": "98550",
@@ -1408,14 +1186,14 @@ const resList=[
         "parentId": "62950",
         "avgRatingString": "4.0",
         "totalRatingsString": "10K+",
-        "sla": {
+        
           "deliveryTime": 52,
           "lastMileTravel": 3,
           "serviceability": "SERVICEABLE",
           "slaString": "52 mins",
           "lastMileTravelString": "3.0 km",
           "iconType": "ICON_TYPE_EMPTY"
-        },
+        ,
         "availability": {
           "nextCloseTime": "2023-08-20 23:30:00",
           "opened": true
@@ -1523,14 +1301,14 @@ const resList=[
         "parentId": "182848",
         "avgRatingString": "3.6",
         "totalRatingsString": "10K+",
-        "sla": {
+       
           "deliveryTime": 32,
           "lastMileTravel": 2.7,
           "serviceability": "SERVICEABLE",
           "slaString": "32 mins",
           "lastMileTravelString": "2.7 km",
           "iconType": "ICON_TYPE_EMPTY"
-        },
+        ,
         "availability": {
           "nextCloseTime": "2023-08-20 23:20:00",
           "opened": true
