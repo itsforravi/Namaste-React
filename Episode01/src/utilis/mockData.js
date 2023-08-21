@@ -7,7 +7,7 @@ const resList=[
         "locality": "Jatepur North",
         "areaName": "Golghar",
         "costForTwo": "₹400 for two",
-        "avgRating": 3.2,
+        "avgRating": 4.7,
         "cuisines": [
           "Bakery"
         ],
@@ -126,7 +126,7 @@ const resList=[
           "Fast Food",
           "Pizzas"
         ],
-        "avgRating": 3.5,
+        "avgRating": 4.3,
         "feeDetails": {
           "restaurantId": "621221",
           "fees": [
@@ -236,7 +236,7 @@ const resList=[
         "locality": "Shivnagar",
         "areaName": "Golghar",
         "costForTwo": "₹200 for two",
-        "avgRating": 3.5,
+        "avgRating": 3.9,
         "cuisines": [
           "Indian",
           "Snacks"
@@ -1047,7 +1047,7 @@ const resList=[
         "cuisines": [
           "Pizzas"
         ],
-        "avgRating": 3.8,
+        "avgRating": 4.8,
         "feeDetails": {
           "restaurantId": "305577",
           "fees": [
@@ -1165,7 +1165,7 @@ const resList=[
           "South Indian",
           "Continental"
         ],
-        "avgRating": 4,
+        "avgRating": 4.01,
         "veg": true,
         "feeDetails": {
           "restaurantId": "98550",
@@ -1281,7 +1281,7 @@ const resList=[
           "Mughlai",
           "Chinese"
         ],
-        "avgRating": 3.6,
+        "avgRating": 4.6,
         "feeDetails": {
           "restaurantId": "96858",
           "fees": [

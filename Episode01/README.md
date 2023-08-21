@@ -1,6 +1,7 @@
-Namaste React
+# Namaste React
 
 # parcel 
+
 dev build,
 local server ,
 HMR (Hot Module replacement),
@@ -138,20 +139,21 @@ If none of them is present, that means only the version specified in package.jso
 Q: Why should I not modify package-lock.json?
 A: package-lock.json file contains the information about the dependencies and their versions used in the project. Deleting it would cause dependencies issues in the production environment. So don't modify it, It's being handled automatically by NPM.
 
-Q: What is node_modules ? Is it a good idea to push that on git?
-A: node_modules folder like a cache for the external modules that your project depends upon. When you npm install them, they are downloaded from the web and copied into the node_modules folder and Nodejs is trained to look for them there when you import them (without a specific path). Don't push node_modulesin github because it contains lots of files(more than 100 MB), it will cost you memory space.
+# What is node_modules ? Is it a good idea to push that on git?
+* node_modules folder like a cache for the external modules that your project depends upon. When you npm install them, they are downloaded from the web and copied into the node_modules folder and Nodejs is trained to look for them there when you import them (without a specific path). Don't push node_modulesin github because it contains lots of files(more than 100 MB), it will cost you memory space.
 
-Q: What is the dist folder?
-A: The /dist folder contains the minimized version of the source code. The code present in the /dist folder is actually the code which is used on production web applications. Along with the minified code, the /dist folder also comprises of all the compiled modules that may or may not be used with other systems.
+# What is the dist folder?
+* The /dist folder contains the minimized version of the source code. The code present in the /dist folder is actually the code which is used on production web applications. Along with the minified code, the /dist folder also comprises of all the compiled modules that may or may not be used with other systems.
 
-Q: What is browserslist?
-A: Browserslist is a tool that allows specifying which browsers should be supported in your frontend app by specifying "queries" in a config file. It's used by frameworks/libraries such as React, Angular and Vue, but it's not limited to them.
+# What is browserslist?
+
+* Browserslist is a tool that allows specifying which browsers should be supported in your frontend app by specifying "queries" in a config file. It's used by frameworks/libraries such as React, Angular and Vue, but it's not limited to them.
 
 # Namaste Food
 
  * Header
  *  -Logo
- *   -Nav Items
+ *  -Nav Items
  * Body
  *   -Search
  *   -Resturent Container
