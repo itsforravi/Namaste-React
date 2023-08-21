@@ -20,7 +20,7 @@
 *Tree shaking algorithum-Remove unuse code, 
 *Different Dev and prod bundles
 
-
+##
 ## Chapter 02 - Igniting our App
 
 
@@ -138,6 +138,7 @@
 
 * Browserslist is a tool that allows specifying which browsers should be supported in your frontend app by specifying "queries" in a config file. It's used by frameworks/libraries such as React, Angular and Vue, but it's not limited to them.
 
+##
 
 ## Episode-04 Let's Get Hooks
 # Namaste Food
