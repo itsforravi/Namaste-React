@@ -1,8 +1,12 @@
+import { LOGO_URL } from "../utilis/contants";
+
+
+
 const Header=()=>{
     return (
         <div className="Header">
             <div className="logo-container">
-                <img className="logo" src="https://www.designmantic.com/logo-images/1759.png?company=Company+Name&slogan=&verify=1"/>
+                <img className="logo"  src={LOGO_URL}/>
             </div>
             <div className="nav-items">
               <ul>

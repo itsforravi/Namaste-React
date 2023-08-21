@@ -166,5 +166,14 @@ A: Browserslist is a tool that allows specifying which browsers should be suppor
  
   
 
+# two type of export
+ * Default Export/Import
+    -Export default component
+    -import component from "path"
+
+
+ * name Export/Import
+   -export const component;
+   import {component } from "path"
 
 
