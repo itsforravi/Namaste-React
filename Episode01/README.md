@@ -147,8 +147,24 @@ A: The /dist folder contains the minimized version of the source code. The code 
 Q: What is browserslist?
 A: Browserslist is a tool that allows specifying which browsers should be supported in your frontend app by specifying "queries" in a config file. It's used by frameworks/libraries such as React, Angular and Vue, but it's not limited to them.
 
+# Namaste Food
 
-
+ * Header
+ *  -Logo
+ *   -Nav Items
+ * Body
+ *   -Search
+ *   -Resturent Container
+ *   -ResturentCard
+ *   -Img
+ *   -name of Res, star Rating,Cuisines ,etc
+ * Footer
+ *  -CopyRight
+ *   -Links
+ *   -Address
+ *   -Contact
+ 
+  
 
 
 
