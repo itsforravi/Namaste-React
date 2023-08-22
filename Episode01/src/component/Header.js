@@ -20,7 +20,9 @@ console.log("Header Render");
                 <li>Cart</li>
                 <button className="login" 
                 onClick={()=>
-                  {setBtnNameReact("logout");
+                  {  btnNameReact==="login"?
+                    setBtnNameReact("logout")
+                   : setBtnNameReact("login");
                  
                 }}>
                     {btnNameReact}</button>
