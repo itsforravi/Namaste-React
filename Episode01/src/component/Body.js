@@ -9,8 +9,9 @@ const Body=()=>{
 
 //Local State variable -Super powerful variable(create state variable)
 let [ListOfRestaurent,setListofRestaurent]=useState([]);
- 
+const  [filterdRestaurant,setfiltedRestaurant]=useState([]);
 const [searchText,setsearchText]=useState("");
+
 
 
 
@@ -79,6 +80,10 @@ const fetchData=async()=>{
     console.log(json);
     // Opptional Chaning
     setListofRestaurent(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setfiltedRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+  
+
+
 };
 
 // Conditional Rendering
@@ -87,7 +92,7 @@ const fetchData=async()=>{
 // }
 
 
-    return ListOfRestaurent.length===0 ? <Shimmer/>:
+    return ListOfRestaurent.length==0 ? <Shimmer/>:
     (
        <div className="body">
       <div className="filter">
@@ -101,6 +106,12 @@ const fetchData=async()=>{
                 // filter the restaurant cards and updatw th UI
                 //search text
                 console.log(searchText);
+                const filterdRestaurant=
+                ListOfRestaurent.filter((res)=>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase()));
+               
+               setfiltedRestaurant(filterdRestaurant);
+            
             }}>Search</button>
         </div>
         <button 
@@ -117,7 +128,7 @@ const fetchData=async()=>{
             </button>
       </div>
            <div className="res-container">
-       { ListOfRestaurent.map(restaurant=>
+       {filterdRestaurant.map(restaurant=>
        (<ResturentCard key={restaurant.info.id} resData={restaurant}/>))}
         
            </div> 
