@@ -1,8 +1,12 @@
 import { LOGO_URL } from "../utilis/contants";
-
+import { useState } from "react";
 
 
 const Header=()=>{
+ 
+
+const [btnNameReact,setBtnNameReact]=useState("login");
+console.log("Header Render");
     return (
         <div className="Header">
             <div className="logo-container">
@@ -14,6 +18,12 @@ const Header=()=>{
                 <li>About us</li>
                 <li>Contact us</li>
                 <li>Cart</li>
+                <button className="login" 
+                onClick={()=>
+                  {setBtnNameReact("logout");
+                 
+                }}>
+                    {btnNameReact}</button>
               </ul>
             </div>
         </div>
