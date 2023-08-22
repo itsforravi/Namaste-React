@@ -9,6 +9,11 @@ const Body=()=>{
 
 //Local State variable -Super powerful variable(create state variable)
 let [ListOfRestaurent,setListofRestaurent]=useState([]);
+ 
+const [searchText,setsearchText]=useState("");
+
+
+
 // Normal JS variable
 // let ListOfRestaurent=null;
 
@@ -86,6 +91,18 @@ const fetchData=async()=>{
     (
        <div className="body">
       <div className="filter">
+        <div className="search">
+            <input type="text" className="search-box" value={searchText}
+            onChange={(e)=>{setsearchText(e.target.value);
+            
+            }}
+            />
+            <button onClick={()=>{
+                // filter the restaurant cards and updatw th UI
+                //search text
+                console.log(searchText);
+            }}>Search</button>
+        </div>
         <button 
         className="filter-btn" 
         onClick={()=>{
@@ -96,7 +113,8 @@ const fetchData=async()=>{
         )
         setListofRestaurent(filteredList);
         }}>
-            Top Rated restaurant</button>
+            Top Rated restaurant
+            </button>
       </div>
            <div className="res-container">
        { ListOfRestaurent.map(restaurant=>
