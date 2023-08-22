@@ -1,13 +1,14 @@
 import ResturentCard from "./ResturentCard";
 import resList from "../utilis/mockData.js";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import Shimmer from "./shimmer";
 
 
 const Body=()=>{
 
 
 //Local State variable -Super powerful variable(create state variable)
-let [ListOfRestaurent,setListofRestaurent]=useState(resList);
+let [ListOfRestaurent,setListofRestaurent]=useState([]);
 // Normal JS variable
 // let ListOfRestaurent=null;
 
@@ -59,14 +60,36 @@ let [ListOfRestaurent,setListofRestaurent]=useState(resList);
 //         }
 //     }
 // ];
+
+
+useEffect(()=>{
+    fetchData();
+},[]);
   
-    return (
+const fetchData=async()=>{
+    const data= await fetch(
+       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=27.1766701&lng=78.00807449999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
+    const json=await data.json();
+    console.log(json);
+    // Opptional Chaning
+    setListofRestaurent(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+};
+
+// Conditional Rendering
+// if(ListOfRestaurent.length===0){
+//     return<Shimmer/>
+// }
+
+
+    return ListOfRestaurent.length===0 ? <Shimmer/>:
+    (
        <div className="body">
       <div className="filter">
         <button 
         className="filter-btn" 
         onClick={()=>{
-            setListofRestaurent()
+        
         //    FIllter Logic Here
          const filteredList=ListOfRestaurent.filter(
             (res)=>res.info.avgRating>4
@@ -76,11 +99,10 @@ let [ListOfRestaurent,setListofRestaurent]=useState(resList);
             Top Rated restaurant</button>
       </div>
            <div className="res-container">
-       {
-         ListOfRestaurent.map(restaurant=>(<ResturentCard key={restaurant.info.id} resData={restaurant}/>))
-       }
+       { ListOfRestaurent.map(restaurant=>
+       (<ResturentCard key={restaurant.info.id} resData={restaurant}/>))}
         
-           </div>
+           </div> 
        </div>
     );
    };

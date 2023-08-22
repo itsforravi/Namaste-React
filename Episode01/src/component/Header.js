@@ -10,7 +10,7 @@ const Header=()=>{
             </div>
             <div className="nav-items">
               <ul>
-                <li ><a href="#"></a>Home</li>
+                <li ><a href="#">Home</a></li>
                 <li>About us</li>
                 <li>Contact us</li>
                 <li>Cart</li>
