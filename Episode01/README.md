@@ -177,3 +177,8 @@
         * useEffect()
 
 
+# 2 TypeRouting in web apps
+  * Client Side Routing
+  * Server Side Routing
+
+
