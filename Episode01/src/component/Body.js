@@ -92,7 +92,7 @@ const fetchData=async()=>{
 // }
 
 
-    return ListOfRestaurent.length==0 ? <Shimmer/>:
+    return (ListOfRestaurent.length==0)? <Shimmer/>:
     (
        <div className="body">
       <div className="filter">
