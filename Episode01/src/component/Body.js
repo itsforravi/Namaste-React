@@ -13,6 +13,7 @@ const  [filterdRestaurant,setfiltedRestaurant]=useState([]);
 const [searchText,setsearchText]=useState("");
 
 
+console.log("Body Render");
 
 
 // Normal JS variable
@@ -92,7 +93,7 @@ const fetchData=async()=>{
 // }
 
 
-    return (ListOfRestaurent.length==0)? <Shimmer/>:
+    return (ListOfRestaurent.length==0)? <Shimmer/>: 
     (
        <div className="body">
       <div className="filter">
