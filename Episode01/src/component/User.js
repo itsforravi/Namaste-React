@@ -7,7 +7,8 @@ const User=({name})=>{
     useEffect(()=>{
 //API calls
 
-    },[])
+    },[]);
+    
 
     return (
     <div className="user-card">

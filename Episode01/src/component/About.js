@@ -19,8 +19,8 @@ class About extends React.Component{
                 <h2>This is Namaster React </h2>
                 
                 {/* <User name={"Ravi Kumar Gupt(function)"}/> */}
-                <UserClass name={"Ravi Kumar Gupt(class)"} location={"Gorakhpur (class)"}/>
-                <UserClass name={"Ravi Kumar (class)"} location={"Agra "}/>
+                <UserClass name={"First (class)"} location={"Gorakhpur (class)"}/>
+               
                 </div>
     
         );
@@ -29,14 +29,18 @@ class About extends React.Component{
     /*
 -Parent Constractor
 -Parent render   
-     -Ravi Constructor
-     -Ravi render
-     -Ravi ComponentDidMount
+     -First Constructor
+     -First render
+   
      
 
-     -Ravi Constructor
-     -Ravi render
-     -Ravi ComponentDidMount
+     -Second Constructor
+     -Second render
+
+
+     <DOM UPDATED -IN SINGLE BATCH>
+    -First ComponentDidMount
+     -Second ComponentDidMount
      
 -Parent ComponentDidMount
 
