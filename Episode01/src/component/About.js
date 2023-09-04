@@ -26,6 +26,22 @@ class About extends React.Component{
         );
         
     }
+    /*
+-Parent Constractor
+-Parent render   
+     -Ravi Constructor
+     -Ravi render
+     -Ravi ComponentDidMount
+     
+
+     -Ravi Constructor
+     -Ravi render
+     -Ravi ComponentDidMount
+     
+-Parent ComponentDidMount
+
+
+    */
 }
 
 
