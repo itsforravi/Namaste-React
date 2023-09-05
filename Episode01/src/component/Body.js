@@ -94,7 +94,7 @@ const fetchData=async()=>{
 // }
 
 
-    return ListOfRestaurent.length === 0 ? 
+    return ListOfRestaurent.length == 0 ? 
     (<Shimmer/>)
     : 
     (
