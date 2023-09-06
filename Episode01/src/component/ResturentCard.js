@@ -2,7 +2,14 @@ import { CDN_URL } from "../utilis/contants";
 
 const ResturentCard=(props)=>{
     const {resData}=props;
-    const {cloudinaryImageId,name,cuisines,costForTwo,avgRating,deliveryTime}=resData?.info;
+    const {cloudinaryImageId,
+        name,
+        cuisines,
+        costForTwo,
+        avgRating,
+        deliveryTime
+    }=
+    resData?.info;
        return (
            <div className="res-card-1">
                <img className="res-logo" alt="res-logo" src={CDN_URL
