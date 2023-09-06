@@ -1,13 +1,13 @@
 import { LOGO_URL } from "../utilis/contants";
 import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import useOnlineStatus from "../utilis/useOnlineStatus";
 
 const Header=()=>{
  
 
 const [btnNameReact,setBtnNameReact]=useState("login");
-console.log("Header Render");
+const onlineStatus=useOnlineStatus();
 
 
 //if dependency arr=> useEffect is called on eveery render.
@@ -24,6 +24,9 @@ useEffect(()=>{
             </div>
             <div className="nav-items">
               <ul>
+                <li>
+                  Online Status:{onlineStatus?"Online":"Offline"  }
+                </li>
                 <li >
                   <Link to="/" >Home</Link>
                 </li>
