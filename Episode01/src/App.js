@@ -8,7 +8,13 @@ import Contact from "./component/Contact.js";
 import Error from "./component/Error.js";
 import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
 import RestaurantMenu from "./component/RestaurantMenu.js";
+import Grocery from "./component/Grocery.js";
 
+
+
+//Chunking
+//Code Splitting
+//Dynamic Bundling
 
 
   const AppLayout=()=>{
@@ -38,6 +44,10 @@ const appRouter=createBrowserRouter([
     {
       path:"/contact",
       element:<Contact/>,
+    },
+    {
+      path:"/grocery",
+      element:<Grocery/>,
     },
     {
       path:"/restaurants/:resId",
