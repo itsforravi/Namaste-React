@@ -1,21 +1,30 @@
-import React from "react";
+import React ,{lazy,Suspense}from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./component/Header.js";
-import Body from "./component/Body.js";
+// import Body from "./component/Body.js";
 
-import About from "./component/About.js";
-import Contact from "./component/Contact.js";
+// import About from "./component/About.js";
+// import Contact from "./component/Contact.js";
 import Error from "./component/Error.js";
 import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
-import RestaurantMenu from "./component/RestaurantMenu.js";
-import Grocery from "./component/Grocery.js";
+// import RestaurantMenu from "./component/RestaurantMenu.js";
+// import Grocery from "./component/Grocery.js";
 
 
 
 //Chunking
 //Code Splitting
 //Dynamic Bundling
+//lazy Loading
+//on demad loading
 
+
+const Grocery=lazy(()=>import("./component/Grocery.js"));
+
+const About=lazy(()=>import("./component/About.js"));
+const Contact =lazy(()=>import("./component/Contact.js"));
+const Body =lazy(()=>import("./component/Body.js"));
+const RestaurantMenu =lazy(()=>import("./component/RestaurantMenu.js"));
 
   const AppLayout=()=>{
     return (
@@ -35,23 +44,33 @@ const appRouter=createBrowserRouter([
   children:[
     {
       path:"/",
-      element:<Body/>,
+      element:<Suspense fallback={<h1>Loading...</h1>}>
+     <Body/>
+    </Suspense>,
     },
     {
       path:"/about",
-      element:<About/>,
+      element:<Suspense fallback={<h1>Loading...</h1>}>
+      <About/>
+    </Suspense>,
     },
     {
       path:"/contact",
-      element:<Contact/>,
+      element:<Suspense fallback={<h1>Loading...</h1>}>
+      <Contact/>
+    </Suspense>,
     },
     {
       path:"/grocery",
-      element:<Grocery/>,
+      element:<Suspense fallback={<h1>Loading...</h1>}>
+        <Grocery/>
+      </Suspense>,
     },
     {
       path:"/restaurants/:resId",
-      element:<RestaurantMenu/>,
+      element:<Suspense fallback={<h1>Loading...</h1>}>
+   <RestaurantMenu/>
+    </Suspense>,
     },
   ],
   errorElement:<Error/>,
