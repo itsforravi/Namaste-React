@@ -105,14 +105,14 @@ if(onlineStatus===false) return
     : 
     (
        <div className="body">
-      <div className="filter">
-        <div className="search">
-            <input type="text" className="search-box" value={searchText}
+      <div className="filter flex">
+        <div className="search m-4 p-4" >
+            <input type="text" className="border border-solid border-black" value={searchText}
             onChange={(e)=>{setsearchText(e.target.value);
             
             }}
             />
-            <button onClick={()=>{
+            <button className="px-4 py-2 bg-green-100 m-4 rounded-lg" onClick={()=>{
                 // filter the restaurant cards and updatw th UI
                 //search text
                 console.log(searchText);
@@ -124,8 +124,8 @@ if(onlineStatus===false) return
             
             }}>Search</button>
         </div>
-        <button 
-        className="filter-btn" 
+        <div  className="search m-4 p-4 flex items-center"> <button 
+        className="px-4 py-2 bg-gray-100 rounded-lg " 
         onClick={()=>{
         
         //    FIllter Logic Here
@@ -135,9 +135,10 @@ if(onlineStatus===false) return
         setListofRestaurent(filteredList);
         }}>
             Top Rated restaurant
-            </button>
+            </button></div>
+        
       </div>
-           <div className="res-container">
+           <div className="flex flex-wrap">
        {filterdRestaurant.map(restaurant=>
        (<Link  key={restaurant?.info.id} to={"/restaurants/" + restaurant?.info.id}><ResturentCard key={restaurant.info.id} resData={restaurant}/></Link>))}
         
