@@ -28,4 +28,22 @@ const ResturentCard=(props)=>{
              </div>
        );
    };
+//Higher Order Component
+
+//Input restaurant card=> restaurantCardPromoted
+
+ export const withPromotedLabel=(ResturentCard)=>{
+    return (props)=>{
+        return(
+            <div>
+                <label>promoted</label>
+                <ResturentCard {...props}/>
+            </div>
+        );
+    };
+};
+
+
+
+
    export default ResturentCard;
