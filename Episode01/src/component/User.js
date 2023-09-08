@@ -19,7 +19,7 @@ console.log("UseEffect return ");
   
 
     return (
-    <div className="user-card">
+    <div className="m-4 p-4 bg-gray-50 rounded-lg">
         <h1>Count={count}</h1>
         <h1>Count2={count2}</h1>
   <h2>Name:{name}</h2>

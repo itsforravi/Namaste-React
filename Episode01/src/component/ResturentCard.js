@@ -11,7 +11,7 @@ const ResturentCard=(props)=>{
     }=
     resData?.info;
        return (
-           <div className="m-4 p-4 w-[250px] rounded-lg bg-slate-100">
+           <div className="m-4 p-4 w-[250px] rounded-lg bg-slate-100 hover:bg-green-300">
                <img className="rounded-lg"
                 alt="res-logo" src={CDN_URL
                +cloudinaryImageId

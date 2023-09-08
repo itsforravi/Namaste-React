@@ -19,29 +19,29 @@ useEffect(()=>{
     },[btnNameReact]);
 
     return (
-        <div className="flex justify-between bg-pink-100 shadow-lg mb-2">
+        <div className="flex justify-between bg-pink-100 shadow-lg mb-2 md:bg-yellow-200 lg:bg-red-200">
             <div className="logo-container">
                 <img className="w-56"  src={LOGO_URL}/>
             </div>
             <div className="flex items-center">
               <ul className="flex p-4 m-4" >
-                <li className="px-4">
+                <li className="px-4 hover:bg-neutral-100 rounded-xl">
                   Online Status:{onlineStatus?"✅":"🔴"  }
                 </li>
-                <li className="px-4" >
+                <li className="px-4 hover:bg-neutral-100 rounded-xl" >
                   <Link to="/" >Home</Link>
                 </li>
-                <li className="px-4">
+                <li className="px-4 hover:bg-neutral-100 rounded-xl">
                   <Link to="/about" >About us</Link>
                   </li>
-                <li className="px-4">
+                <li className="px-4 hover:bg-neutral-100 rounded-xl">
                   <Link to="/contact">Contact us</Link>
                   </li>
-                <li>
+                <li className="px-4 hover:bg-neutral-100 rounded-xl">
                   <Link to="/grocery">Grocery</Link>
                   </li>
-                <li className="px-4">Cart</li>
-                <button className="login" 
+                <li className="px-4 hover:bg-neutral-100 rounded-xl">Cart</li>
+                <button  className="px-4 hover:bg-neutral-100 rounded-xl"
                 onClick={()=>
                   {  btnNameReact==="login"?
                     setBtnNameReact("logout")
