@@ -100,7 +100,7 @@ if(onlineStatus===false) return
 // }
 
 
-    return ListOfRestaurent.length == 0 ? 
+    return ListOfRestaurent.length === 0 ? 
     (<Shimmer/>)
     : 
     (
