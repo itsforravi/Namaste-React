@@ -44,6 +44,15 @@ const ResturentCard=(props)=>{
 };
 
 
+//Higher Order Component
+
+//Input -RestaurantCard=>restaurantCardPromoted
+
+const withPromotedLabel=(ResturentCard)=>{
+   return ()=>{
+    
+   }
+}
 
 
    export default ResturentCard;

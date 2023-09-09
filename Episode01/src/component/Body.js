@@ -14,7 +14,7 @@ const  [filterdRestaurant,setfiltedRestaurant]=useState([]);
 const [searchText,setsearchText]=useState("");
 
 
-console.log("Body Render");
+console.log("Body Render",ListOfRestaurent);
 
 
 // Normal JS variable
@@ -140,7 +140,10 @@ if(onlineStatus===false) return
       </div>
            <div className="flex flex-wrap">
        {filterdRestaurant.map(restaurant=>
-       (<Link  key={restaurant?.info.id} to={"/restaurants/" + restaurant?.info.id}><ResturentCard key={restaurant.info.id} resData={restaurant}/></Link>))}
+       (<Link  key={restaurant?.info.id} to={"/restaurants/" + restaurant?.info.id}>
+        {}
+        <ResturentCard key={restaurant.info.id} 
+        resData={restaurant}/></Link>))}
         
            </div> 
        </div>
