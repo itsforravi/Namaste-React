@@ -50,7 +50,13 @@ const ResturentCard=(props)=>{
 
 const withPromotedLabel=(ResturentCard)=>{
    return ()=>{
-    
+    return(
+        <div>
+<label >promoted</label>
+<ResturentCard/>
+
+        </div>
+    )
    }
 }
 
