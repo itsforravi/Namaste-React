@@ -36,7 +36,8 @@ const ResturentCard=(props)=>{
     return (props)=>{
         return(
             <div>
-                <label>promoted</label>
+                <label className="absolute bg-black text-white
+                m-2 p-2 rounded-lg">promoted</label>
                 <ResturentCard {...props}/>
             </div>
         );
@@ -44,21 +45,6 @@ const ResturentCard=(props)=>{
 };
 
 
-//Higher Order Component
-
-//Input -RestaurantCard=>restaurantCardPromoted
-
-const withPromotedLabel=(ResturentCard)=>{
-   return ()=>{
-    return(
-        <div>
-<label >promoted</label>
-<ResturentCard/>
-
-        </div>
-    )
-   }
-}
 
 
    export default ResturentCard;

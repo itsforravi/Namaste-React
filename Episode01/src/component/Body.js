@@ -1,4 +1,4 @@
-import ResturentCard from "./ResturentCard";
+import ResturentCard,{withPromotedLabel} from "./ResturentCard";
 import resList from "../utilis/mockData.js";
 import {useEffect, useState} from "react";
 import Shimmer from "./shimmer";
@@ -13,7 +13,7 @@ let [ListOfRestaurent,setListofRestaurent]=useState([]);
 const  [filterdRestaurant,setfiltedRestaurant]=useState([]);
 const [searchText,setsearchText]=useState("");
 
-
+const ResturentCardPromoted=withPromotedLabel(ResturentCard);
 console.log("Body Render",ListOfRestaurent);
 
 
@@ -141,9 +141,14 @@ if(onlineStatus===false) return
            <div className="flex flex-wrap">
        {filterdRestaurant.map(restaurant=>
        (<Link  key={restaurant?.info.id} to={"/restaurants/" + restaurant?.info.id}>
-        {}
-        <ResturentCard key={restaurant.info.id} 
-        resData={restaurant}/></Link>))}
+        
+        
+        {restaurant.data.promoted ? (<ResturentCardPromoted resData={restaurant}/>):
+        
+        ( <ResturentCard key={restaurant.info.id}
+        />)}
+       
+       </Link>))}
         
            </div> 
        </div>
