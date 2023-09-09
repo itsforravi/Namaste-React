@@ -2,6 +2,7 @@
  import Shimmer from "./shimmer";
  import { useParams } from "react-router-dom";
  import useRestaurantMenu from "../utilis/useRestraurantMenu";
+import RestaurantCatagory from "./RestaurantCategory";
 
  
  const RestaurantMenu=()=>{
@@ -17,23 +18,24 @@ const resInfo=useRestaurantMenu(resId);
 
 const {name,cuisines,cloudinaryImageId,costForTwo,avgRating}=resInfo?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants[0]?.info;
 
-const {itemCards}=resInfo.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants[0]?.info;
+const {itemCards}=resInfo.cards[2]?.
+card?.card?.gridElements?.infoWithStyle?.restaurants[0]?.info;
 console.log(itemCards);
+const categories=resInfo?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants.filte
+(c=>c.card?.card?.['@type'])
 return  (
 
-        <div className="menu">
+        <div className="text-center">
+            <h1 className="font-bold my-6 text-2xl "></h1>
 <h1>{name}</h1>
-<p>
+<p className="font-bold text-lg">
 {cuisines.join(",")}-{costForTwo}
 
 </p>
-<h3>{avgRating}</h3>
-<h2>Menu</h2>
-<ul>
-    
-{itemCards.map((item)=>(<li key={item.card.info.id}>
-    {item.card.info.name}-{"Rs."}{item.card.info.price || item.card.info.defaultPrice}</li>))};
-</ul>
+
+{categories.map((category)=><RestaurantCatagory/>)}
+
+
         </div>
     );
 };
