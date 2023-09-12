@@ -4,13 +4,15 @@ const ItemList=(items)=>{
 
 console.log(items);
 
-return <div>
-   <ul>
+return ( <div>
+   <div>
     {items.map((item)=>
-    (<div key={item.card.info.id} className="p-2 m-2  border-gray-200 
-    border-b-2 text-left">
-        <img src={CDN_URL+item.card.info.imageId}
-        className="w-14"/>
+    (<div key={item.card.info.id} 
+        className="p-2 m-2  border-gray-200 
+    border-b-2 text-left flex justify-between">
+
+
+
 <div className="py-2">
     <span>{item.card.info.name}</span>
     <span>-₹{item.card.info.price 
@@ -20,11 +22,13 @@ return <div>
     </div>
     <p className="text-xs">{item.card.info.description}</p>
 
-    </div>))}
-   </ul>
+    </div>
+    
+    ))}
+   </div>
     </div>
 
-
+);
 }
 
 
