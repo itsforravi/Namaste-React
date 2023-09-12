@@ -23,7 +23,7 @@ card?.card?.gridElements?.infoWithStyle?.restaurants[0]?.info;
 console.log(itemCards);
 const categories=resInfo?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants.filte
 (c=>c.card?.card?.['@type']==="type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget");
-console.log()
+console.log(categories)
 return  (
 
         <div className="text-center">
@@ -34,7 +34,7 @@ return  (
 
 </p>
 
-{categories.map((category)=><RestaurantCatagory/>)}
+{categories.map((category)=><RestaurantCatagory data={category?.card?.card}/>)}
 
 
         </div>
