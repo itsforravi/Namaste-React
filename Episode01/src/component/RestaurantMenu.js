@@ -34,7 +34,7 @@ return  (
 
 </p>
 
-{categories.map((category)=><RestaurantCatagory data={category?.card?.card}/>)}
+{categories.map((category)=><RestaurantCatagory key={category?.card?.card.title} data={category?.card?.card}/>)}
 
 
         </div>
