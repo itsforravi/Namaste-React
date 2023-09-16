@@ -1,9 +1,11 @@
 import ResturentCard,{withPromotedLabel} from "./ResturentCard";
 import resList from "../utilis/mockData.js";
-import {useEffect, useState} from "react";
+import {useEffect, useState,useContext} from "react";
 import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utilis/useOnlineStatus";
+import UserContext from "../utilis/UserContext";
+
 
 const Body=()=>{
 
@@ -88,17 +90,18 @@ const fetchData=async()=>{
 
 };
 const onlineStatus=useOnlineStatus();
-if(onlineStatus===false) return 
+if(onlineStatus===false) return (
 <h1>
     Looks like you're offline Please chec your internet connection 
 </h1>
-
+)
 
 // Conditional Rendering
 // if(ListOfRestaurent.length===0){
 //     return<Shimmer/>
 // }
 
+const {loggedInUser,setUserName}=useContext(UserContext);
 
     return ListOfRestaurent.length === 0 ? 
     (<Shimmer/>)
@@ -124,8 +127,18 @@ if(onlineStatus===false) return
             
             }}>Search</button>
         </div>
-        <div  className="search m-4 p-4 flex items-center"> <button 
-        className="px-4 py-2 bg-gray-100 rounded-lg " 
+        <div  className="search m-4 p-4 flex items-center">
+            </div>
+        <div  className="search m-4 p-4 flex items-center">
+            <label>UserName:</label>
+<input className="border p-2   border-black" 
+value={loggedInUser}
+onChange={(e)=>setUserName(e.target.value)} />
+
+            </div>
+
+         </div>   
+    {/* <button className="px-4 py-2 bg-gray-100 rounded-lg " 
         onClick={()=>{
         
         //    FIllter Logic Here
@@ -137,21 +150,24 @@ if(onlineStatus===false) return
             Top Rated restaurant
             </button></div>
         
-      </div>
+      </div> */}
            <div className="flex flex-wrap">
-       {filterdRestaurant.map(restaurant=>
-       (<Link  key={restaurant?.info.id} to={"/restaurants/" + restaurant?.info.id}>
+       {filterdRestaurant.map((restaurant)=>
+       (<Link  key={restaurant?.info.id} 
+       to={"/restaurants/" + restaurant?.info.id}>
         
         
-        {restaurant.data.promoted ? (<ResturentCardPromoted resData={restaurant}/>):
+        {restaurant.data.promoted ? (
+        <ResturentCardPromoted resData={restaurant}
+        />):
         
         ( <ResturentCard key={restaurant.info.id}
         />)}
        
        </Link>))}
-        
+        </div>
            </div> 
-       </div>
+       
     );
    };
 export default Body;   

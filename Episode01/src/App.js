@@ -1,10 +1,8 @@
 import React ,{lazy,Suspense, useEffect, useState}from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./component/Header.js";
-
 import Error from "./component/Error.js";
 import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
-
 import UserContext from "./utilis/UserContext.js";
 
 
@@ -35,15 +33,11 @@ setUserName(data.name);
 
     return (
      //default value 
-      <UserContext.Provider value={{loggedInUser:userName}}>
+      <UserContext.Provider value={{loggedInUser:userName,setUserName}}>
         {/* Ravi Kumar */}
         <div  className="app">
-           <UserContext.Provider value={{loggedInUser:"Ravi"}}>
-            {/* {Ravi} */}
-
-          <Header/>
-          </UserContext.Provider>
-   <Outlet/>
+        <Header/>
+         <Outlet/>
   </div>
   </UserContext.Provider>
     );
