@@ -1,7 +1,8 @@
 import { LOGO_URL } from "../utilis/contants";
-import { useState,useEffect } from "react";
+import { useState,useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utilis/useOnlineStatus";
+import UserContext from "../utilis/UserContext";
 
 const Header=()=>{
  
@@ -10,6 +11,7 @@ const [btnNameReact,setBtnNameReact]=useState("login");
 
 const onlineStatus=useOnlineStatus();
 
+const data=useContext(UserContext);
 
 //if dependency arr=> useEffect is called on eveery render.
 //If dependency array is empty =[]=> use effect is called on initial render(just once) 
@@ -48,7 +50,9 @@ useEffect(()=>{
                    : setBtnNameReact("login");
                  
                 }}>
-                    {btnNameReact}</button>
+                    {btnNameReact}
+                    </button>
+                    <li className="px-4"> Cart</li>
               </ul>
             </div>
         </div>

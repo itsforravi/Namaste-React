@@ -14,7 +14,7 @@ const  [filterdRestaurant,setfiltedRestaurant]=useState([]);
 const [searchText,setsearchText]=useState("");
 
 const ResturentCardPromoted=withPromotedLabel(ResturentCard);
-console.log("Body Render",ListOfRestaurent);
+
 
 
 // Normal JS variable
