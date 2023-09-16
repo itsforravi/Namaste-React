@@ -11,7 +11,8 @@ const [btnNameReact,setBtnNameReact]=useState("login");
 
 const onlineStatus=useOnlineStatus();
 
-const data=useContext(UserContext);
+const {loggedInUser}=useContext(UserContext);
+console.log(loggedInUser);
 
 //if dependency arr=> useEffect is called on eveery render.
 //If dependency array is empty =[]=> use effect is called on initial render(just once) 
@@ -52,7 +53,7 @@ useEffect(()=>{
                 }}>
                     {btnNameReact}
                     </button>
-                    <li className="px-4"> Cart</li>
+                    <li className="px-4 font-bold">{loggedInUser}</li>
               </ul>
             </div>
         </div>
