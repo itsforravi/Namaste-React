@@ -12,7 +12,7 @@ import { useState } from "react";
 const {resId}=useParams();
 const resInfo=useRestaurantMenu(resId);
   
-const [showIndex,setShoowIndex]=useState(0);
+const [showIndex,setShowIndex]=useState(null);
 
 
 
@@ -41,6 +41,7 @@ return  (
     key={category?.card?.card.title}
      data={category?.card?.card}
      showItem={index==showIndex ?true:false}
+     setShowIndex={()=>setShowIndex(index)}
      />
      ))}
 
