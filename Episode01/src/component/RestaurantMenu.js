@@ -3,6 +3,7 @@
  import { useParams } from "react-router-dom";
  import useRestaurantMenu from "../utilis/useRestraurantMenu";
 import RestaurantCatagory from "./RestaurantCategory";
+import { useState } from "react";
 
  
  const RestaurantMenu=()=>{
@@ -11,6 +12,7 @@ import RestaurantCatagory from "./RestaurantCategory";
 const {resId}=useParams();
 const resInfo=useRestaurantMenu(resId);
   
+const [showIndex,setShoowIndex]=useState(0);
 
 
 
@@ -34,12 +36,13 @@ return  (
 
 </p>
 
-{categories.map((category)=>
+{categories.map((category,index)=>(
 <RestaurantCatagory 
     key={category?.card?.card.title}
      data={category?.card?.card}
-     showItem={false}
-     />)}
+     showItem={index==showIndex ?true:false}
+     />
+     ))}
 
 
         </div>
