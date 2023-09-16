@@ -21,7 +21,10 @@ class About extends React.Component{
                 <div>
                     loggedInUser
                     <UserContext.Consumer>
-                        {(data)=>console.log(data)}
+                        {(loggedInUser)=><h1 className="text-xl font-bold">
+                            {loggedInUser}
+                            </h1>
+                            }
                     </UserContext.Consumer>
                 </div>
                 <h2>This is Namaster React </h2>
