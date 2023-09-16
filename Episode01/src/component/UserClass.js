@@ -16,7 +16,7 @@ class UserClass extends React.Component{
     }
    async componentDidMount(){
 this.timer=setInterval(()=>{
-    console.log("Namaste React OP")
+    // console.log("Namaste React OP")
 },1000);
 
 

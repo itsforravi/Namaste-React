@@ -7,7 +7,7 @@ const User=({name})=>{
     useEffect(()=>{
 //API calls
 setInterval(()=>{
-    console.log("Namaste React OP")
+    // console.log("Namaste React OP")
 },1000);
 console.log("useEffect")
 return ()=>{
