@@ -1,22 +1,13 @@
-import React ,{lazy,Suspense}from "react";
+import React ,{lazy,Suspense, useEffect, useState}from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./component/Header.js";
-// import Body from "./component/Body.js";
 
-// import About from "./component/About.js";
-// import Contact from "./component/Contact.js";
 import Error from "./component/Error.js";
 import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
-// import RestaurantMenu from "./component/RestaurantMenu.js";
-// import Grocery from "./component/Grocery.js";
+
+import UserContext from "./utilis/UserContext.js";
 
 
-
-//Chunking
-//Code Splitting
-//Dynamic Bundling
-//lazy Loading
-//on demad loading
 
 
 const Grocery=lazy(()=>import("./component/Grocery.js"));
@@ -27,13 +18,34 @@ const Body =lazy(()=>import("./component/Body.js"));
 const RestaurantMenu =lazy(()=>import("./component/RestaurantMenu.js"));
 
   const AppLayout=()=>{
+
+
+const [userName,setUserName]=useState();
+
+//Authentication
+useEffect(()=>{
+//Make an API call and send username and password
+const data={
+name:"Ravi Kumar Gupt"
+}
+setUserName(data.name);
+
+},[])
+
+
     return (
+     //default value 
+      <UserContext.Provider value={{loggedInUser:userName}}>
+        {/* Ravi Kumar */}
         <div  className="app">
-          
-   <Header/>
+           <UserContext.Provider value={{loggedInUser:"Ravi"}}>
+            {/* {Ravi} */}
+
+          <Header/>
+          </UserContext.Provider>
    <Outlet/>
- 
   </div>
+  </UserContext.Provider>
     );
   };
 
