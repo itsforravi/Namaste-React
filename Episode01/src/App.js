@@ -4,12 +4,7 @@ import Header from "./component/Header.js";
 import Error from "./component/Error.js";
 import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
 import UserContext from "./utilis/UserContext.js";
-
-
-
-
 const Grocery=lazy(()=>import("./component/Grocery.js"));
-
 const About=lazy(()=>import("./component/About.js"));
 const Contact =lazy(()=>import("./component/Contact.js"));
 const Body =lazy(()=>import("./component/Body.js"));
