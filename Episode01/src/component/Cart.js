@@ -18,6 +18,8 @@ dispatch(clearCart());
      onClick= {handleClearCart}>
         
         Clear Cart</button>
+        {cartItems.length===0 && 
+        (<h1>Cart is empty add Items to the cart</h1>)}
     <ItemList items={cartItems}/>
 
     </div>
