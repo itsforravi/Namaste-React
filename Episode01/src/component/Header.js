@@ -13,11 +13,11 @@ const [btnNameReact,setBtnNameReact]=useState("login");
 const onlineStatus=useOnlineStatus();
 
 const {loggedInUser}=useContext(UserContext);
-console.log(loggedInUser);
+// console.log(loggedInUser);
 
 //Subscribing to the store using a  Seletor
-const cart=useSelector((store)=>store.cart.items);
-
+const cartItems =useSelector((store)=>store.cart.items);
+// console.log(cartItems);
 //if dependency arr=> useEffect is called on eveery render.
 //If dependency array is empty =[]=> use effect is called on initial render(just once) 
 //if dependeny array is [btnNameReact] => called every time benNameReact is updated
@@ -47,7 +47,7 @@ useEffect(()=>{
                 <li className="px-4 hover:bg-neutral-100 rounded-xl">
                   <Link to="/grocery">Grocery</Link>
                   </li>
-                <li className="px-4 font-bold text-xl hover:bg-neutral-100 rounded-xl">Cart(0 items)</li>
+                <li className="px-4 font-bold text-xl hover:bg-neutral-100 rounded-xl">Cart-({cartItems.length} items)</li>
                 <button  className="px-4 hover:bg-neutral-100 rounded-xl"
                 onClick={()=>
                   {  btnNameReact==="login"?
