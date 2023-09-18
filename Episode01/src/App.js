@@ -4,6 +4,10 @@ import Header from "./component/Header.js";
 import Error from "./component/Error.js";
 import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
 import UserContext from "./utilis/UserContext.js";
+import { Provider } from "react-redux";
+import appStore from "./utilis/appStore.js";
+
+
 const Grocery=lazy(()=>import("./component/Grocery.js"));
 const About=lazy(()=>import("./component/About.js"));
 const Contact =lazy(()=>import("./component/Contact.js"));
@@ -28,6 +32,9 @@ setUserName(data.name);
 
     return (
      //default value 
+     
+     <Provider store={appStore}>
+
       <UserContext.Provider value={{loggedInUser:userName,setUserName}}>
         {/* Ravi Kumar */}
         <div  className="app">
@@ -35,6 +42,7 @@ setUserName(data.name);
          <Outlet/>
   </div>
   </UserContext.Provider>
+  </Provider>
     );
   };
 
