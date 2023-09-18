@@ -7,9 +7,9 @@ const ItemList=(items)=>{
     const Dispatch=useDispatch();
 
 
-const handleAddItem=()=>{
+const handleAddItem=(item)=>{
     //Dispatch acction
-    Dispatch(addItem("cart"))
+    Dispatch(addItem(item))
 }
 
 return ( 
@@ -32,7 +32,7 @@ return (
     <div className="w-3/12 p-4">
         <div className="absolute">
         <button className="p-2 mx-16 rounded-lg bg-black text-white shadow-lg ">
-           onClick={handleAddItem}
+           onClick={()=>handleAddItem(item)}
             Add+
             </button>
     </div>
