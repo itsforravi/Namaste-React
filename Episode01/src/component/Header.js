@@ -3,6 +3,7 @@ import { useState,useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utilis/useOnlineStatus";
 import UserContext from "../utilis/UserContext";
+import { useSelector } from "react-redux";
 
 const Header=()=>{
  
@@ -13,6 +14,9 @@ const onlineStatus=useOnlineStatus();
 
 const {loggedInUser}=useContext(UserContext);
 console.log(loggedInUser);
+
+//Subscribing to the store using a  Seletor
+const cart=useSelector((store)=>store.cart.items);
 
 //if dependency arr=> useEffect is called on eveery render.
 //If dependency array is empty =[]=> use effect is called on initial render(just once) 
@@ -43,7 +47,7 @@ useEffect(()=>{
                 <li className="px-4 hover:bg-neutral-100 rounded-xl">
                   <Link to="/grocery">Grocery</Link>
                   </li>
-                <li className="px-4 hover:bg-neutral-100 rounded-xl">Cart</li>
+                <li className="px-4 font-bold text-xl hover:bg-neutral-100 rounded-xl">Cart(0 items)</li>
                 <button  className="px-4 hover:bg-neutral-100 rounded-xl"
                 onClick={()=>
                   {  btnNameReact==="login"?

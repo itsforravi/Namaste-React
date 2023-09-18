@@ -4,11 +4,12 @@ const cartSlice=createSlice({
 
 name:'cart',
 initialState:{
-    item:[]
+    item:["burger",'pizza']
 
 },
 reducers: {
 addItem:(state,action)=>{
+    //mutating the state here 
 state.items.push(action.payload);
 },
 removeItem:(state)=>{
