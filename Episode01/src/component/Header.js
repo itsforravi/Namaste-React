@@ -47,7 +47,8 @@ useEffect(()=>{
                 <li className="px-4 hover:bg-neutral-100 rounded-xl">
                   <Link to="/grocery">Grocery</Link>
                   </li>
-                <li className="px-4 font-bold text-xl hover:bg-neutral-100 rounded-xl">Cart-({cartItems.length} items)</li>
+                <li className="px-4 font-bold text-xl hover:bg-neutral-100 rounded-xl">
+                <Link to="/cart">Cart-({cartItems.length} items)</Link>   </li>
                 <button  className="px-4 hover:bg-neutral-100 rounded-xl"
                 onClick={()=>
                   {  btnNameReact==="login"?
