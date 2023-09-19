@@ -15,7 +15,8 @@ addItem:(state,action)=>{
 // newState.items.push(action.payload);
 // return newState;
 
-
+//Redux Toolkit
+//We have to mutate the state
 state.items.push(action.payload);
 
 },
