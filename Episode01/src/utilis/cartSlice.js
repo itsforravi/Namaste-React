@@ -10,7 +10,7 @@ initialState:{
 reducers: {
 addItem:(state,action)=>{
     //mutating the state here 
-    //vanialla(older)redux => Don't MUtate state
+    //vanialla(older)redux => Don't MUtate state , returning was mandatory
 // const newState=[...state];
 // newState.items.push(action.payload);
 // return newState;
