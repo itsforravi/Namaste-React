@@ -10,7 +10,14 @@ initialState:{
 reducers: {
 addItem:(state,action)=>{
     //mutating the state here 
+    //vanialla(older)redux => Don't MUtate state
+// const newState=[...state];
+// newState.items.push(action.payload);
+// return newState;
+
+
 state.items.push(action.payload);
+
 },
 removeItem:(state)=>{
     state.items.pop();
