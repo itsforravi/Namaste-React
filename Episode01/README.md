@@ -188,6 +188,10 @@
     * Connect our store to our app
     * slice (cartSlice)
     * dispatch(action)
-    *Selector
+    * Selector
     
-
+# Types of testing (developer)
+   * Unit Testing
+   * Integration Testing
+   * End to End Testing -e2e testing
+   
