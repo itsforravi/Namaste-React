@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit"
+import {createSlice, current} from "@reduxjs/toolkit"
 
 const cartSlice=createSlice({
 
@@ -15,19 +15,31 @@ addItem:(state,action)=>{
 // newState.items.push(action.payload);
 // return newState;
 
-//Redux Toolkit
+//Redux Toolkit uses immer BTS
 //We have to mutate the state
 
 state.items.push(action.payload);
+
 
 },
 removeItem:(state)=>{
     state.items.pop();
 },
+
+//originalState={items:["pizza"]}
 clearCart:(state)=>{
-    state.items.length=0;
+//     console.log(state);
+//     console.log(current(state));
+//    state=[];
+//    console.log(state);
+
+//RTX-either Mutate the existing state or return a new state
+
+    state.items.length=0;//originalState={items : []}
+
+    return {items : []}; //this new[] will be replace inside originalState={items : []}
 },
-}
+},
 });
 
 
