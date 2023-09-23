@@ -8,3 +8,9 @@ test("Should load contact us component ",()=>{
 
     expect(heading).toBeInTheDocument();
 });
+test("Should load button inside Contact component ",()=>{
+    render(<Contact/>);
+    const button=screen.getByText("Submit");
+
+    expect(button).toBeInTheDocument();
+});
