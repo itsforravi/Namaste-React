@@ -1,3 +1,3 @@
 export const sum=()=>{
-    return a+babel;
+    return a+b;
 }
