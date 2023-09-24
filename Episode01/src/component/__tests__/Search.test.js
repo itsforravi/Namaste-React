@@ -1,6 +1,7 @@
 import Body from "../Body"
 import {render} from "@testing-library/react";
 import MOCK_DATA from "../../component/mocks/mockResListData.json"
+import { act } from "react-dom/test-utils";
 
 globalThis.fetch=jest.fn(()=>{
     return Promise.resolve({
@@ -11,8 +12,8 @@ globalThis.fetch=jest.fn(()=>{
 })
 
 
-it("Should render the body component with search button",()=>{
+it("Should render the body with search",async()=>{
   
-    render(<Body/>);
+   await act(async()=>render(<Body/>));
 
 });
