@@ -35,7 +35,7 @@ setUserName(data.name);
      
      <Provider store={appStore}>
 
-      <UserContext.Provider value={{loggedInUser:userName,setUserName}}>
+-      <UserContext.Provider value={{loggedInUser:userName,setUserName}}>
         {/* Ravi Kumar */}
         <div  className="app">
         <Header/>
