@@ -3,6 +3,7 @@ import {render} from "@testing-library/react";
 import MOCK_DATA from "../../component/mocks/mockResListData.json"
 import { act } from "react-dom/test-utils";
 import { BrowserRouter } from "react-router-dom";
+import  "@testing-library/jest-dom";
 
 
 globalThis.fetch=jest.fn(()=>{
@@ -21,5 +22,9 @@ it("Should render the body with search",async()=>{
    <Body/>
    </BrowserRouter>
    ));
+
+   const searchBtn=screen.getByRole("button",{name:"Search"});
+   console.log(searchBtn);
+   expect(searchBtn).toBeInTheDocument();
 
 });
