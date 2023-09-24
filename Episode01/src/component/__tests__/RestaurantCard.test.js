@@ -13,6 +13,7 @@ it("should render RestaurentCard component with props Data",()=>{
    
     render(<ResturentCard resData={MOCK_DATA}/>);
   const name =   screen.getByText("Bhawna Sweets");
-  expect(name).toBeInTheDocument()
+  expect(name).toBeInTheDocument();
+  
 
 })
