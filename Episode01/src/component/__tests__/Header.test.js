@@ -3,9 +3,9 @@ import { Provider } from "react-redux";
 import Header from "../Header"
 import appStore from "../../utilis/appStore";
 import { BrowserRouter } from "react-router-dom";
+import "@testing-library/jest-dom";
 
-
-ItemList("Should Header Component with a login button",()=>{
+ItemList("Should render Header Component with a login button",()=>{
 
 render(
     <BrowserRouter>
@@ -14,5 +14,8 @@ render(
 </Provider>
 </BrowserRouter>
 );
+const loginButton=screen.getByRole("button");
+expect(loginButton).toBeTheDocument();
+
 
 })
