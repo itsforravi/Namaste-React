@@ -25,7 +25,7 @@ it("Should Search Res List for Burger text input",async()=>{
    
    const cardsBeforeSearch=screen.getAllByTestId("resCard");
 
-   expect(cardsBeforeSearch.length).ToBe(20);
+   expect(cardsBeforeSearch.length).toBe(20);
 
 
 
@@ -40,5 +40,23 @@ it("Should Search Res List for Burger text input",async()=>{
 
 
     expect(cardsAfterSearch.length).toBe(4);
+
+});
+it("Should filter Top Rated Restaurent ",async()=>{
+  
+   await act(async()=>render(
+   <BrowserRouter>
+   <Body/>
+   </BrowserRouter>
+   ));
+   
+   const cardsBeforeFilter=screen.getAllByTestId("resCard");
+
+   expect(cardsBeforeFilter.length).ToBe(20);
+
+   const topRateBtn=screen.getByRole("button",{name:"Top Rated Restaurant"});
+   fireEvent.click(topRateBtn);
+   const cardsAfterFilter=screen.getAllByTestId("resCard");
+   expect(cardsAfterFilter.length).toBe(30)
 
 });
