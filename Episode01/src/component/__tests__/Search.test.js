@@ -15,25 +15,30 @@ globalThis.fetch=jest.fn(()=>{
 })
 
 
-it("Should render the body with search",async()=>{
+it("Should Search Res List for Burger text input",async()=>{
   
    await act(async()=>render(
    <BrowserRouter>
    <Body/>
    </BrowserRouter>
    ));
+   
+   const cardsBeforeSearch=screen.getAllByTestId("resCard");
 
-   const searchBtn=screen.getByRole("button",{name:"Search"});
+   expect(cardsBeforeSearch.length).ToBe(20);
+
+
+
+    const searchBtn=screen.getByRole("button",{name:"Search"});
     const searchInput=screen.getByTestId("searchInput");
    fireEvent.change(searchInput,{target:{value:"burger"}});
-   fireEvent.click(searchBtn);
+  fireEvent.click(searchBtn);
 
 
-//Screen should load 4 cards
+// //Screen should load 4 cards
+ const cardsAfterSearch=  screen.getAllByTestId("resCard");
 
- const cards=  screen.getAllByTestId("resCard");
 
-
-   expect(cards.length).toBe(4);
+    expect(cardsAfterSearch.length).toBe(4);
 
 });
