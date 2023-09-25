@@ -1,12 +1,13 @@
-import { fireEvent, render ,screen} from "@testing-library/react"
+import { fireEvent, render ,screen} from "@testing-library/react";
 import { act } from "react-dom/test-utils";
 import RestaurantMenu from "../RestaurantMenu";
 import Header from "../Header";
-import MOCK_DATA_NAME from "../../component/mocks/mockResMenu.json"
+import MOCK_DATA_NAME from "../../component/mocks/mockResMenu.json";
 import { Provider } from "react-redux";
 import appStore from "../../utilis/appStore";
 import { BrowserRouter } from "react-router-dom";
-import "@testing-library/jest-dom"
+import "@testing-library/jest-dom";
+import Cart from "../Cart";
 
 global.fetch=jest.fn(()=>
  Promise.resolve({
@@ -21,6 +22,7 @@ await act (async()=>render(
 <Provider store={appStore} >
     <Header/>
 <RestaurantMenu/>
+<Cart/>
 </Provider>
 </BrowserRouter>));
 
