@@ -6,6 +6,7 @@ import MOCK_DATA_NAME from "../../component/mocks/mockResMenu.json"
 import { Provider } from "react-redux";
 import appStore from "../../utilis/appStore";
 import { BrowserRouter } from "react-router-dom";
+import "@testing-library/jest-dom"
 
 global.fetch=jest.fn(()=>
  Promise.resolve({
@@ -29,5 +30,7 @@ fireEvent.click(accordionHeader);
     expect(screen.getAllByAltTextId("foodItems").length).toBe(5);
 const addBtn=screen.getALllByRole("button",{name:"add +"});
 fireEvent.click(addBtn[0]);
+
+ expect(screen.getByText("Cart - (1 items)")).toBeInTheDocument();
 
 })
