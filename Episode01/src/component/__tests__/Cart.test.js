@@ -34,5 +34,15 @@ const addBtn=screen.getALllByRole("button",{name:"add +"});
 fireEvent.click(addBtn[0]);
 
  expect(screen.getByText("Cart - (1 items)")).toBeInTheDocument();
+fireEvent.click(addBtn[1]);
 
-})
+ expect(screen.getByText("Cart - (2 items)")).toBeInTheDocument();
+
+expect (screen.getAllByTestId("foodItems").length).toBe(7);
+fireEvent.click(screen.getByRole("button",{name:"Clear cart"}));
+
+
+expect (screen.getAllByTestId("foodItems").length).toBe(5);
+expect(screen.getByText("Cart is empty ,Add Items to the cart")).toBeInTheDocument();
+
+});
