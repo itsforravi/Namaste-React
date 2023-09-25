@@ -1,5 +1,5 @@
 import Body from "../Body"
-import {render} from "@testing-library/react";
+import {fireEvent, render} from "@testing-library/react";
 import MOCK_DATA from "../../component/mocks/mockResListData.json"
 import { act } from "react-dom/test-utils";
 import { BrowserRouter } from "react-router-dom";
@@ -25,7 +25,15 @@ it("Should render the body with search",async()=>{
 
    const searchBtn=screen.getByRole("button",{name:"Search"});
     const searchInput=screen.getByTestId("searchInput");
-   console.log(searchBtn);
-   expect(searchBtn).toBeInTheDocument();
+   fireEvent.change(searchInput,{target:{value:"burger"}});
+   fireEvent.click(searchBtn);
+
+
+//Screen should load 4 cards
+
+ const cards=  screen.getAllByTestId("resCard");
+
+
+   expect(cards.length).toBe(4);
 
 });
