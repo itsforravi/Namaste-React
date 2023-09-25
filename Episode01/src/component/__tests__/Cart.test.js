@@ -5,6 +5,7 @@ import Header from "../Header";
 import MOCK_DATA_NAME from "../../component/mocks/mockResMenu.json"
 import { Provider } from "react-redux";
 import appStore from "../../utilis/appStore";
+import { BrowserRouter } from "react-router-dom";
 
 global.fetch=jest.fn(()=>
  Promise.resolve({
@@ -15,10 +16,12 @@ global.fetch=jest.fn(()=>
 it("should load Restaurant Menu Component ",async()=>{
 
 await act (async()=>render(
+    <BrowserRouter>
 <Provider store={appStore} >
     <Header/>
 <RestaurantMenu/>
-</Provider>));
+</Provider>
+</BrowserRouter>));
 
 const accordionHeader=screen.getByText("Biryani(5)");
 fireEvent.click(accordionHeader);
