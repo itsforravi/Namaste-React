@@ -24,7 +24,7 @@ it("Should render the body with search",async()=>{
    ));
 
    const searchBtn=screen.getByRole("button",{name:"Search"});
-    const searchInput=screen.getByTestId()
+    const searchInput=screen.getByTestId("searchInput");
    console.log(searchBtn);
    expect(searchBtn).toBeInTheDocument();
 
